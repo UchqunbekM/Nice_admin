@@ -4,11 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import com.example.nice_admin.models.Vehicle;
+import com.example.nice_admin.repositories.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kindsonthegenius.fleetapp.models.Vehicle;
-import com.kindsonthegenius.fleetapp.repositories.VehicleRepository;
 
 @Service
 public class VehicleService {

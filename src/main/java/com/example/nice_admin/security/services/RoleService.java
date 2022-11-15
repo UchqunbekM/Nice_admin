@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -40,7 +39,7 @@ public class RoleService {
     public void assignRole(Integer userId, Integer roleId){
         User user = userRepository.findById(userId).orElse(null);
         Role role = roleRepository.findById(roleId).orElse(null);
-        Set<Role> userRoles = user.getRoles();
+       Set<Role> userRoles=user.getRoles();
         userRoles.add(role);
         user.setRoles(userRoles);
         userRepository.save(user);
